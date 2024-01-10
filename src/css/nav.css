@@ -12,6 +12,7 @@
   font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
+  border-right: 2px solid var(--color-smoke-70);
 }
 
 @media screen and (min-width: 769px) {
@@ -78,7 +79,7 @@
 
 .nav-panel-menu:not(.is-active)::after {
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(207 224 226 / 17%);
   display: block;
   position: absolute;
   top: 0;
@@ -177,7 +178,8 @@
 }
 
 .nav-panel-explore {
-  background: var(--nav-background);
+  background: var(--nav-explore-background);
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -197,12 +199,25 @@
   flex-shrink: 0;
   color: var(--nav-muted-color);
   box-shadow: 0 -1px 0 var(--nav-panel-divider-color);
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   line-height: 1;
   height: var(--drawer-height);
+  flex-direction: column;
+}
+
+.nav-panel-explore .context .exploring {
+  color: var(--color-hartshorn-dark);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+}
+
+.nav-panel-explore .context .context-panel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .nav-panel-explore:not(:first-child) .context {
@@ -268,12 +283,12 @@
 }
 
 .nav-panel-explore .component .version a {
-  background: var(--nav-border-color);
+  background: var(--color-hartshorn-primary);
+  color: var(--color-white);
   border-radius: 0.25rem;
   white-space: nowrap;
   padding: 0.25em 0.5em;
   display: inherit;
-  opacity: 0.75;
 }
 
 .nav-panel-explore .component .is-current a {

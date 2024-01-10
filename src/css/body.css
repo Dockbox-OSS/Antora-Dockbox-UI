@@ -1,5 +1,8 @@
 @media screen and (min-width: 1024px) {
   .body {
     display: flex;
+    max-width: var(--page-max-width);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
