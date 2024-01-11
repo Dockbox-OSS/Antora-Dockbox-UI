@@ -25,7 +25,7 @@ body {
   top: 0;
   width: var(--page-max-width);
   z-index: var(--z-index-navbar);
-  border-bottom: 2px solid var(--color-smoke-70);
+  border-bottom: 1px solid var(--color-smoke-70);
 }
 
 .navbar a {
@@ -66,7 +66,7 @@ body {
 
 .navbar-brand .navbar-item .navbar-logo {
   display: block;
-  height: 2.5rem;
+  height: 1.75rem;
   width: auto;
   margin: 0 1rem 0 0;
 }

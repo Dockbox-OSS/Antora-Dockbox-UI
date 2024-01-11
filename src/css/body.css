@@ -1,7 +1,17 @@
 @media screen and (min-width: 1024px) {
   .body {
     display: flex;
+    flex-direction: column;
     max-width: var(--page-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--page-max-width);
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
