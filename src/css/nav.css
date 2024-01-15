@@ -176,10 +176,6 @@ span.single-page-item, a.single-page-item {
   margin-bottom: 5px;
 }
 
-.nav-item:has(.nav-text) {
-  padding: 9px 0;
-}
-
 /* adds some breathing room below a nested list */
 .nav-item-toggle ~ .nav-list {
   padding-bottom: 0.125rem;

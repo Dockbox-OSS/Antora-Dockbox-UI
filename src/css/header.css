@@ -59,6 +59,10 @@ body {
   padding-right: 0.375rem;
 }
 
+.navbar-item .feather {
+  margin-right: 10px;
+}
+
 .navbar-brand .navbar-item.search {
   flex: auto;
   justify-content: flex-end;
