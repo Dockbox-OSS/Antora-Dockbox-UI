@@ -13,7 +13,8 @@
 
   var menuPanel = navContainer.querySelector('[data-panel=menu]')
   if (!menuPanel) return
-  var explorePanel = navContainer.querySelector('[data-panel=explore]')
+
+  var explorePanel = document.querySelector('[data-panel=explore]')
 
   var currentPageItem = menuPanel.querySelector('.is-current-page')
   var originalPageItem = currentPageItem
@@ -25,7 +26,7 @@
   }
 
   find(menuPanel, '.nav-item-toggle').forEach(function (btn) {
-    var li = btn.parentElement
+    var li = btn.parentElement.parentElement
     btn.addEventListener('click', toggleActive.bind(li))
     var navItemSpan = findNextElement(btn, '.nav-text')
     if (navItemSpan) {
@@ -38,8 +39,8 @@
     navMenuToggle.style.display = ''
     navMenuToggle.addEventListener('click', function () {
       var collapse = !this.classList.toggle('is-active')
-      find(menuPanel, '.nav-item > .nav-item-toggle').forEach(function (btn) {
-        collapse ? btn.parentElement.classList.remove('is-active') : btn.parentElement.classList.add('is-active')
+      find(menuPanel, '.nav-item > .nav-toggle-row > .nav-item-toggle').forEach(function (btn) {
+        collapse ? btn.parentElement.parentElement.classList.remove('is-active') : btn.parentElement.parentElement.classList.add('is-active')
       })
       if (currentPageItem) {
         if (collapse) activateCurrentPath(currentPageItem)
@@ -54,7 +55,7 @@
     explorePanel.querySelector('.context').addEventListener('click', function () {
       // NOTE logic assumes there are only two panels
       find(nav, '[data-panel]').forEach(function (panel) {
-        panel.classList.toggle('is-active')
+        explorePanel.classList.toggle('is-active')
       })
     })
   }
