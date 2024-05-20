@@ -81,21 +81,6 @@
   height: var(--nav-panel-menu-height);
 }
 
-/*.nav-panel-menu:not(.is-active) .nav-menu {*/
-/*  opacity: 0.75;*/
-/*}*/
-
-/*.nav-panel-menu:not(.is-active)::after {*/
-/*  content: "";*/
-/*  background: rgb(207 224 226 / 17%);*/
-/*  display: block;*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  right: 0;*/
-/*  bottom: 0;*/
-/*  left: 0;*/
-/*}*/
-
 .nav-menu {
   min-height: 100%;
   padding: 0.5rem 0.75rem;
@@ -172,7 +157,8 @@ button + .nav-text:hover,
   background: var(--color-smoke-50);
 }
 
-span.single-page-item, a.single-page-item {
+span.single-page-item,
+a.single-page-item {
   margin-bottom: 5px;
 }
 
