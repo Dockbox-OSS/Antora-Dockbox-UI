@@ -1,6 +1,17 @@
-<div class="toolbar" role="navigation">
-{{> nav-toggle}}
-{{> breadcrumbs}}
-{{> page-versions}}
-{{> edit-this-page}}
+<div class="page-meta" role="navigation">
+    <div class="toolbar">
+        {{> nav-toggle}}
+        {{> breadcrumbs}}
+    </div>
+    <div class="page-title">
+        <h1 class="page">{{{or page.title 'Unknown page'}}} {{>edit-this-page}}</h1>
+        <div class="page-metadata">
+            <i data-feather="user"></i> <span>{{{or page.author 'Unknown author(s)'}}}</span>
+            <span class="separator">|</span>
+            <i data-feather="layers"></i> <span>Version</span> {{> toolbar-versions}}
+        </div>
+        {{#if page.description}}
+            <p class="page-description">{{page.description}}</p>
+        {{/if}}
+    </div>
 </div>

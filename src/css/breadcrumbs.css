@@ -1,8 +1,8 @@
 .breadcrumbs {
   display: none;
   flex: 1 1;
-  padding: 0 0.5rem 0 0.75rem;
   line-height: var(--nav-line-height);
+  color: var(--color-gray-50);
 }
 
 @media screen and (min-width: 1024px) {
@@ -31,6 +31,10 @@ a + .breadcrumbs {
 .breadcrumbs li::after {
   content: "/";
   padding: 0 0.5rem;
+}
+
+.breadcrumbs li:last-of-type {
+  color: var(--color-gray-10);
 }
 
 .breadcrumbs li:last-of-type::after {

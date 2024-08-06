@@ -12,7 +12,8 @@
   font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
-  border-right: 2px solid var(--color-smoke-70);
+  max-height: calc(100vh - calc(76 / var(--rem-base) * 1rem) - 1.5rem);
+  overflow: hidden;
 }
 
 @media screen and (min-width: 769px) {
@@ -36,9 +37,7 @@
 }
 
 .nav {
-  background: var(--nav-background);
   position: relative;
-  top: var(--toolbar-height);
   height: var(--nav-height);
 }
 
@@ -50,10 +49,8 @@
 
 @media screen and (min-width: 1024px) {
   .nav {
-    top: var(--navbar-height);
     box-shadow: none;
     position: sticky;
-    height: var(--nav-height--desktop);
   }
 }
 
@@ -65,12 +62,6 @@
   display: flex;
   flex-direction: column;
   height: inherit;
-}
-
-.nav-panel-menu {
-  overflow-y: scroll;
-  overscroll-behavior: none;
-  height: var(--nav-panel-menu-height);
 }
 
 .nav-panel-menu:not(.is-active) .nav-menu {
@@ -89,10 +80,14 @@
 }
 
 .nav-menu {
-  min-height: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: calc(20px - 1rem) 0 20px 20px;
   line-height: var(--nav-line-height);
   position: relative;
+  background: var(--color-smoke-50);
+  margin-top: 0.75rem;
+  margin-left: 0.75rem;
+  max-height: calc(100vh - var(--navbar-height) - 1.5rem);
+  overflow: auto;
 }
 
 .nav-menu-toggle {
@@ -100,12 +95,12 @@
   border: none;
   float: right;
   height: 1em;
-  margin-right: -0.5rem;
+  margin-right: 0.5rem;
   opacity: 0.75;
   outline: none;
   padding: 0;
   position: sticky;
-  top: calc((var(--nav-line-height) - 1 + 0.5) * 1rem);
+  top: calc((var(--nav-line-height) - 1 + 0.5) * 1.5rem);
   visibility: hidden;
   width: 1em;
 }
@@ -128,8 +123,12 @@
 
 .nav-list {
   list-style: none;
-  margin: 0 0 0 0.75rem;
-  padding: 0;
+  padding: 0 0 0 0.75rem;
+  margin: 0;
+}
+
+.nav-item > .nav-list {
+  border-left: 2px solid var(--toc-border-color);
 }
 
 .nav-menu > .nav-list + .nav-list {
@@ -137,7 +136,8 @@
 }
 
 .nav-item {
-  margin-top: 0.5em;
+  padding-top: 0.5em;
+  margin-top: 0.25em;
 }
 
 /* adds some breathing room below a nested list */
@@ -149,6 +149,11 @@
 .nav-item[data-depth="0"] > .nav-list:first-child {
   display: block;
   margin: 0;
+  padding: 0;
+}
+
+.nav-item[data-depth="0"] > .nav-list {
+  border-left: none;
 }
 
 .nav-item:not(.is-active) > .nav-list {
@@ -156,7 +161,7 @@
 }
 
 .nav-item-toggle {
-  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  background: transparent url(../img/chevron-right.svg) no-repeat center / 50%;
   border: none;
   outline: none;
   line-height: inherit;
@@ -175,6 +180,25 @@
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: var(--body-font-weight-bold);
+  color: var(--color-hartshorn-dark);
+}
+
+.nav-link {
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+}
+
+.nav-section {
+  font-weight: 500;
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+}
+
+.is-current-page {
+  background: var(--color-white);
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  margin-top: 0.25em;
+  margin-left: -0.5em;
+  margin-bottom: -0.25em;
 }
 
 .nav-panel-explore {

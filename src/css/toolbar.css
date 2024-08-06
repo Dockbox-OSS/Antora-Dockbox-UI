@@ -1,19 +1,56 @@
-.toolbar {
+.page-meta {
   color: var(--toolbar-font-color);
+  background-color: var(--color-jet-80);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem var(--doc-margin--desktop-sides);
+  z-index: var(--z-index-toolbar);
+  top: calc(var(--navbar-height) + 1rem);
+  justify-content: flex-start;
+}
+
+.toolbar {
   align-items: center;
-  background-color: var(--toolbar-background);
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
-  justify-content: flex-start;
-  top: calc(var(--navbar-height) + 1rem);
-  z-index: var(--z-index-toolbar);
-  margin-left: var(--doc-margin--desktop-sides);
-  margin-top: 1rem;
 }
 
 .toolbar a {
   color: inherit;
+}
+
+.page-meta h1 {
+  color: var(--color-white);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  hyphens: none;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.page-meta .page-metadata {
+  color: var(--color-gray-30);
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+}
+
+.page-metadata .separator {
+  margin: 0 0.5rem;
+}
+
+.page-metadata .feather {
+  height: 0.875rem;
+  width: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.page-description {
+  color: var(--color-smoke-70);
 }
 
 .nav-toggle {
@@ -53,16 +90,31 @@
 }
 
 .edit-this-page {
-  display: none;
-  padding-right: 0.5rem;
+  color: var(--color-gray-30);
+  font-size: 0.875rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .edit-this-page {
-    display: block;
-  }
+.edit-this-page:hover {
+  color: var(--color-gray-10);
 }
 
-.toolbar .edit-this-page a {
-  color: var(--toolbar-muted-color);
+.edit-this-page .feather {
+  height: 0.875rem;
+  width: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.inline-select {
+  color: inherit;
+  font-size: inherit;
+  background: none;
+  outline: none;
+  border: 1px solid transparent;
+  margin-top: -1px; /* account for border while inline */
+}
+
+.inline-select:hover {
+  cursor: pointer;
+  border: 1px solid var(--color-jet-30);
+  border-radius: 0.25rem;
 }

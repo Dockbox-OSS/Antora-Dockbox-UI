@@ -1,10 +1,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+
   {{#if page.breadcrumbs}}
   <ul>
-    {{#with page.componentVersion}}
-    {{#if (and ./title (ne ./title @root.page.breadcrumbs.0.content))}}
-    <li><a href="{{{relativize ./url}}}">{{{./title}}}</a></li>
-    {{/if}}
+    {{#with @root.page.component}}
+        <li>
+            <select id="module" class="inline-select highlight" onchange="window.location = this.value">
+                {{#each @root.site.components}}
+                    <option value="{{{relativize ./url}}}"
+                            {{#if (eq this.name @root.page.component.name)}}selected{{/if}}
+                    >{{{./title}}}</option>
+                {{/each}}
+            </select>
+        </li>
     {{/with}}
     {{#each page.breadcrumbs}}
     <li>

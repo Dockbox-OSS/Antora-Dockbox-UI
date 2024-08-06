@@ -15,7 +15,7 @@
   --color-jet-30: #424242;
   --color-jet-50: #333;
   --color-jet-70: #222;
-  --color-jet-80: #191919;
+  --color-jet-80: #151515;
   --color-black: #000;
   --color-hartshorn-primary: #64bed2;
   --color-hartshorn-dark: #3a8ea5;
@@ -26,7 +26,7 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Inter", sans-serif;
+  --body-font-family: "Red Hat Text", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica", "Arial", sans-serif;
   --body-font-weight-bold: 600;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 600;
@@ -38,9 +38,9 @@
   --scrollbar-thumb-color: var(--color-gray-10);
   --scrollbar_hover-thumb-color: var(--color-gray-30);
   /* navbar */
-  --navbar-background: var(--color-white);
-  --navbar-font-color: var(--color-jet-80);
-  --navbar_hover-background: var(--color-smoke-70);
+  --navbar-background: var(--color-jet-80);
+  --navbar-font-color: var(--color-white);
+  --navbar_hover-background: var(--color-jet-50);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
@@ -49,7 +49,7 @@
   --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu_hover-background: var(--color-smoke-50);
   /* nav */
-  --nav-background: var(--panel-background);
+  --nav-background: var(--color-smoke-30);
   --nav-border-color: var(--color-gray-10);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-jet-30);
@@ -60,7 +60,7 @@
   /* toolbar */
   --toolbar-background: var(--panel-background);
   --toolbar-border-color: var(--panel-border-color);
-  --toolbar-font-color: var(--color-gray-70);
+  --toolbar-font-color: var(--color-smoke-30);
   --toolbar-muted-color: var(--color-gray-40);
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-40);
@@ -72,6 +72,7 @@
   --note-color: #7da9d9;
   --note-on-color: var(--color-white);
   --tip-color: #a0b7a2;
+  --tip-background: #f0fdf0;
   --tip-on-color: var(--color-white);
   --warning-color: #ceaa82;
   --warning-on-color: var(--color-white);
@@ -84,6 +85,7 @@
   --doc-margin--desktop-sides: 2rem;
   --doc-margin--desktop: 0 var(--doc-margin--desktop-sides);
   --heading-font-color: var(--color-jet-80);
+  --heading-font-family: "Red Hat Display", var(--body-font-family);
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
@@ -131,7 +133,7 @@
   --drawer-height: var(--toolbar-height);
   --body-top: var(--navbar-height);
   --body-min-height: calc(100vh - var(--body-top));
-  --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
+  --nav-height: calc(100% - var(--toolbar-height) - 2rem);
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-menu-height: calc(100% - var(--drawer-height));
   --nav-panel-explore-height: calc(50% + var(--drawer-height));
