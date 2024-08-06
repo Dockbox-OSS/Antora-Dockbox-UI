@@ -10,6 +10,9 @@
   "engines": {
     "node": ">= 8.0.0"
   },
+  "scripts": {
+    "preview": "gulp preview"
+  },
   "browserslist": [
     "last 2 versions"
   ],

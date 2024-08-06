@@ -1,0 +1,9 @@
+<ul class="toolbar-versions">
+    {{#each page.component.versions}}
+        <li class="
+            {{~#if (eq this.version @root.page.componentVersion)}}is-current{{/if~}}
+        ">
+            <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+        </li>
+    {{/each}}
+</ul>

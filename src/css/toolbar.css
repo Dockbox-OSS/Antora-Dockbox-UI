@@ -1,19 +1,56 @@
-.toolbar {
+.page-meta {
   color: var(--toolbar-font-color);
+  background-color: var(--color-jet-80);
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1rem;
+  padding: 1rem var(--doc-margin--desktop-sides);
+  z-index: var(--z-index-toolbar);
+  top: calc(var(--navbar-height) + 1rem);
+  justify-content: flex-start;
+}
+
+.toolbar {
   align-items: center;
-  background-color: var(--toolbar-background);
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
-  justify-content: flex-start;
-  top: calc(var(--navbar-height) + 1rem);
-  z-index: var(--z-index-toolbar);
-  margin-left: var(--doc-margin--desktop-sides);
-  margin-top: 1rem;
 }
 
 .toolbar a {
   color: inherit;
+}
+
+.page-meta h1 {
+  color: var(--color-white);
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  hyphens: none;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.page-meta .page-metadata {
+  color: var(--color-gray-30);
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+}
+
+.page-metadata .separator {
+  margin: 0 0.5rem;
+}
+
+.page-metadata .feather {
+  height: 0.875rem;
+  width: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.page-description {
+  color: var(--color-smoke-70);
 }
 
 .nav-toggle {
@@ -65,4 +102,36 @@
 
 .toolbar .edit-this-page a {
   color: var(--toolbar-muted-color);
+}
+
+ul.toolbar-versions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-direction: row;
+}
+
+ul.toolbar-versions li {
+  color: var(--toolbar-muted-color);
+  font-size: 0.875rem;
+  border: 1px solid var(--toolbar-muted-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem 0 0;
+}
+
+ul.toolbar-versions li:hover {
+  color: var(--toolbar-font-color);
+  background-color: var(--color-jet-50);
+}
+
+ul.toolbar-versions li.is-current {
+  color: var(--toolbar-font-color);
+  background-color: var(--color-jet-70);
+}
+
+ul.toolbar-versions li a {
+  color: inherit;
 }

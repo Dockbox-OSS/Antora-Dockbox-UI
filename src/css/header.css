@@ -25,7 +25,7 @@ body {
   top: 0;
   width: var(--page-max-width);
   z-index: var(--z-index-navbar);
-  border-bottom: 2px solid var(--color-smoke-70);
+  border-bottom: 2px solid var(--color-jet-80);
 }
 
 .navbar a {
@@ -69,6 +69,7 @@ body {
   height: 2.5rem;
   width: auto;
   margin: 0 1rem 0 0;
+  filter: brightness(0) invert(1);
 }
 
 #search-input {
@@ -340,4 +341,10 @@ body {
   .navbar-dropdown a.navbar-item:hover {
     background: var(--navbar-menu_hover-background);
   }
+}
+
+.navbar-item .feather {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
 }
