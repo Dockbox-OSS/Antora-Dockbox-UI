@@ -25,6 +25,7 @@
 .doc h5,
 .doc h6 {
   color: var(--heading-font-color);
+  font-family: var(--heading-font-family);
   font-weight: var(--heading-font-weight);
   hyphens: none;
   line-height: 1.3;
@@ -368,6 +369,11 @@
   margin: 1.4rem 0 0;
 }
 
+.doc .admonitionblock.tip {
+  background: var(--tip-background);
+  border-top: 2px solid var(--tip-color);
+}
+
 .doc .admonitionblock p,
 .doc .admonitionblock td.content {
   font-size: calc(16 / var(--rem-base) * 1rem);
@@ -390,7 +396,6 @@
 
 .doc .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
-  background: var(--admonition-background);
   width: 100%;
   word-wrap: anywhere;
 }
@@ -414,38 +419,6 @@
   padding: 0 0.5rem;
   vertical-align: initial;
   width: fit-content;
-}
-
-.doc .admonitionblock td.icon i::after {
-  content: attr(title);
-  font-weight: var(--admonition-label-font-weight);
-  font-style: normal;
-  text-transform: uppercase;
-}
-
-.doc .admonitionblock td.icon i.icon-caution {
-  background-color: var(--caution-color);
-  color: var(--caution-on-color);
-}
-
-.doc .admonitionblock td.icon i.icon-important {
-  background-color: var(--important-color);
-  color: var(--important-on-color);
-}
-
-.doc .admonitionblock td.icon i.icon-note {
-  background-color: var(--note-color);
-  color: var(--note-on-color);
-}
-
-.doc .admonitionblock td.icon i.icon-tip {
-  background-color: var(--tip-color);
-  color: var(--tip-on-color);
-}
-
-.doc .admonitionblock td.icon i.icon-warning {
-  background-color: var(--warning-color);
-  color: var(--warning-on-color);
 }
 
 .doc .imageblock,

@@ -1,13 +1,22 @@
 footer.footer {
-  background-color: var(--footer-background);
+  background-color: var(--color-white);
+  border-top: 2px solid var(--footer-background);
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
   padding: 1.5rem;
 }
 
+.footer img {
+  max-height: 2rem;
+}
+
 .footer p {
   margin: 0.5rem 0;
+}
+
+.footer .legal {
+  color: var(--color-gray-50);
 }
 
 .footer a {

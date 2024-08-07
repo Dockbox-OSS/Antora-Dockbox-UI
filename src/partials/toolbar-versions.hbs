@@ -1,0 +1,10 @@
+<select name="version" id="version" required
+        class="inline-select"
+        onchange="window.location = this.value;"
+>
+    {{#each page.component.versions}}
+        <option value="{{{relativize ./url}}}"
+            {{~#if (eq this.version @root.page.componentVersion)}}selected{{/if~}}
+        >{{./displayVersion}}</option>
+    {{/each}}
+</select>
